@@ -5,6 +5,8 @@
 </script>
 
 <div class="flex flex-col min-h-screen relative">
+    <div class="absolute inset-0 bg-gradient-to-t from-base-300/70 via-base-300/40 to-base-100/10 -z-10" />
+
   <div
     class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-base-300/30 via-transparent to-transparent -z-20"
   />

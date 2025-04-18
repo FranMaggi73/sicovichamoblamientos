@@ -1,7 +1,6 @@
 <script lang="ts">
   import { products } from '$lib/types';
   import { onMount, onDestroy } from 'svelte';
-  import Footer from '$lib/components/Footer.svelte';
 
   let currentIndex = 0;
   let intervalId: number;
@@ -50,7 +49,6 @@
       {/each}
     </div>
 
-    <!-- Texto responsivo -->
     <div
       class="md:absolute md:left-0 md:top-0 md:h-full md:w-1/2 flex flex-col justify-center px-4 mt-4 md:mt-0"
     >

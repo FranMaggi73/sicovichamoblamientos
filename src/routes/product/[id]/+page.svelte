@@ -4,7 +4,7 @@
   export let data: { product: Product };
 </script>
 
-<main class="flex flex-col bg-base-100">
+<main class="flex flex-col">
   <div
     class="w-full mx-auto px-4 sm:px-6 lg:px-8
            py-4 sm:py-6 lg:py-8

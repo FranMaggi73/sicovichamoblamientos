@@ -1,6 +1,5 @@
 <script lang="ts">
   import { products } from '$lib/types';
-  import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <main class="flex-1 pb-32 sm:pb-16 w-full max-w-screen-xl mx-auto">
