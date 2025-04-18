@@ -55,8 +55,6 @@ export default {
         }
       }
     ],
-    /* Opcional: puedes definir el tema oscuro por defecto si lo necesitas */
-    darkTheme: 'dracula',
     /* Si quieres forzar tu tema sin tener que usar data-theme en HTML */
     defaultTheme: 'caramellatte'
   }

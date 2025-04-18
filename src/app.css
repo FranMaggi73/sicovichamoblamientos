@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 @plugin "daisyui";
+@layer utilities {
+  .force-opacity {
+    --tw-bg-opacity: 1 !important;
+  }
+
+  .gradient-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--b3) / 0.7) 0%,
+      hsl(var(--b3) / 0.3) 30%,
+      hsl(var(--b1) / 0.1) 100%
+    );
+    pointer-events: none;
+    z-index: -40;
+  }
+}

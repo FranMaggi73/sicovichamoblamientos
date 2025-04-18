@@ -1,37 +1,40 @@
 <script lang="ts">
   import type { Product } from '$lib/types';
-  import { pageTitle } from '../../../store/titleStore';
 
   export let data: { product: Product };
-
-  pageTitle.set(data.product.name);
 </script>
 
-<main class="flex-1 w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-  <article
-    class="flex flex-col lg:flex-row gap-8 lg:gap-12 skeleton bg-base-300 rounded-xl p-6 sm:p-8 shadow-lg"
+<main class="flex flex-col bg-base-100">
+  <div
+    class="w-full mx-auto px-4 sm:px-6 lg:px-8
+           py-4 sm:py-6 lg:py-8
+           flex items-center justify-center text-center"
   >
-    <div class="flex-shrink-0 w-full lg:w-1/2 flex justify-center">
-      <img
-        src={data.product.image}
-        alt={data.product.name}
-        class="w-full max-w-md lg:max-w-none h-auto max-h-96 object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-      />
-    </div>
-    <div class="flex flex-col gap-4 flex-1">
-      <h1 class="text-3xl sm:text-4xl font-bold text-secondary">
-        {data.product.name}
-      </h1>
-
-      <p class="text-lg sm:text-xl text-primary">
-        {data.product.description}
-      </p>
-
-      <div class="mt-4 flex items-center gap-4">
-        <span class="text-2xl sm:text-3xl font-bold text-accent">
-          $ {data.product.price.toLocaleString()}
-        </span>
+    <article
+      class="grid grid-cols-1 md:grid-cols-2 gap-6
+                    bg-base-200 rounded-2xl
+                    p-6
+                    shadow-lg w-full mx-2"
+    >
+      <div class="flex items-center justify-center h-56">
+        <img
+          src={data.product.image}
+          alt={data.product.name}
+          class=" h-full object-contain object-center rounded-lg transition-transform duration-300 hover:scale-105"
+        />
       </div>
-    </div>
-  </article>
+
+      <div class="flex flex-col p-2 justify-center items-start">
+        <h1 class="text-3xl font-bold text-accent mb-2 sm:mb-4">
+          {data.product.name}
+        </h1>
+
+        <p
+          class="text-lg text-neutral font-medium sm:font-semibold leading-normal sm:leading-relaxed"
+        >
+          {data.product.description}
+        </p>
+      </div>
+    </article>
+  </div>
 </main>
